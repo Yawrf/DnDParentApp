@@ -9,7 +9,7 @@
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
     <jar href="DnDParentApp.jar" size="4866" download="eager" />
-    <jar href="lib\DiceRoller.jar" size="14080" download="eager" />
+    <jar href="lib\DiceRoller.jar" size="15062" download="eager" />
     <jar href="lib\DnDHealthTracker.jar" size="9422" download="eager" />
     <jar href="lib\DnDTool.jar" size="16297" download="eager" />
     <jar href="lib\FileWriter.jar" size="6401" download="eager" />
