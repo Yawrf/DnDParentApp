@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="DnDParentApp.jnlp">
+  <information>
+    <title>DnDParentApp</title>
+    <vendor>rewil</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="DnDParentApp.jar" size="4866" download="eager" />
+    <jar href="lib\DiceRoller.jar" size="14080" download="eager" />
+    <jar href="lib\DnDHealthTracker.jar" size="9422" download="eager" />
+    <jar href="lib\DnDTool.jar" size="16297" download="eager" />
+    <jar href="lib\FileWriter.jar" size="6401" download="eager" />
+    <jar href="lib\InitiativeHolder.jar" size="6732" download="eager" />
+    <jar href="lib\SorcererHelper.jar" size="6385" download="eager" />
+    <jar href="lib\Spellbook.jar" size="10871" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="DnDParentApp" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="dndparentapp.DnDParentApp"  name="DnDParentApp" />
+  <update check="always"/>
+</jnlp>
