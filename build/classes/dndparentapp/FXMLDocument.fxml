@@ -4,13 +4,14 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="120.0" prefWidth="405.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dndparentapp.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="120.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dndparentapp.FXMLDocumentController">
    <children>
       <Button layoutX="41.0" layoutY="23.0" mnemonicParsing="false" onAction="#openScene1" text="Dice Roller" />
       <Button layoutX="143.0" layoutY="23.0" mnemonicParsing="false" onAction="#openScene2" text="Health Tracker" />
       <Button layoutX="269.0" layoutY="23.0" mnemonicParsing="false" onAction="#openScene3" text="D&amp;D Tool" />
-      <Button layoutX="22.0" layoutY="62.0" mnemonicParsing="false" onAction="#openScene4" text="Initiative Tracker" />
-      <Button layoutX="161.0" layoutY="62.0" mnemonicParsing="false" onAction="#openScene5" text="Sorcerer Helper" />
-      <Button layoutX="295.0" layoutY="62.0" mnemonicParsing="false" onAction="#openScene6" text="Spellbook" />
+      <Button layoutX="366.0" layoutY="23.0" mnemonicParsing="false" onAction="#openScene4" text="Initiative Tracker" />
+      <Button layoutX="94.0" layoutY="60.0" mnemonicParsing="false" onAction="#openScene5" text="Sorcerer Helper" />
+      <Button layoutX="228.0" layoutY="60.0" mnemonicParsing="false" onAction="#openScene6" text="Spellbook" />
+      <Button layoutX="324.0" layoutY="60.0" mnemonicParsing="false" onAction="#openScene7" text="Weather" />
    </children>
 </AnchorPane>
