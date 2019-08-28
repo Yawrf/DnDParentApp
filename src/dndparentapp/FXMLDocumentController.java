@@ -59,6 +59,12 @@ public class FXMLDocumentController implements Initializable {
         moveOnScreen();
     }
     
+    public void openScene8() {
+        applicationStage.setScene(notebookScene);
+        applicationStage.show();
+        moveOnScreen();
+    }
+    
     private void moveOnScreen() {
         Screen screen = Screen.getMainScreen();
         double maxX = screen.getWidth();
@@ -81,6 +87,7 @@ public class FXMLDocumentController implements Initializable {
     Scene sorcererScene = null;
     Scene spellbookScene = null;
     Scene weatherScene = null;
+    Scene notebookScene = null;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -88,49 +95,55 @@ public class FXMLDocumentController implements Initializable {
         
         //<editor-fold>
         try {
-            ClassLoader diceLoader = FXMLDocumentController.class.getClassLoader();
+            ClassLoader appLoader = FXMLDocumentController.class.getClassLoader();
             
             // Load Dice App
-            Class tempApp = diceLoader.loadClass("diceroller.DiceRoller");
+            Class tempApp = appLoader.loadClass("diceroller.DiceRoller");
             diceroller.DiceRoller diceMain = (diceroller.DiceRoller) tempApp.newInstance();
             diceMain.start(applicationStage);
             diceScene = diceMain.getScene();
             
             // Load Health App
-            tempApp = diceLoader.loadClass("dndhealthtracker.DnDHealthTracker");
+            tempApp = appLoader.loadClass("dndhealthtracker.DnDHealthTracker");
             dndhealthtracker.DnDHealthTracker healthMain = (dndhealthtracker.DnDHealthTracker) tempApp.newInstance();
             healthMain.start(applicationStage);
             healthScene = healthMain.getScene();
             
             // Load Tool App
-            tempApp = diceLoader.loadClass("dndtool.DnDTool");
+            tempApp = appLoader.loadClass("dndtool.DnDTool");
             dndtool.DnDTool toolMain = (dndtool.DnDTool) tempApp.newInstance();
             toolMain.start(applicationStage);
             toolScene = toolMain.getScene();
             
             // Load Iniative App
-            tempApp = diceLoader.loadClass("initiativeholder.InitiativeHolder");
+            tempApp = appLoader.loadClass("initiativeholder.InitiativeHolder");
             initiativeholder.InitiativeHolder initiativeMain = (initiativeholder.InitiativeHolder) tempApp.newInstance();
             initiativeMain.start(applicationStage);
             initiativeScene = initiativeMain.getScene();
             
             // Load Sorcerer App
-            tempApp = diceLoader.loadClass("sorcererhelper.SorcererHelper");
+            tempApp = appLoader.loadClass("sorcererhelper.SorcererHelper");
             sorcererhelper.SorcererHelper sorcererMain = (sorcererhelper.SorcererHelper) tempApp.newInstance();
             sorcererMain.start(applicationStage);
             sorcererScene = sorcererMain.getScene();
             
             // Load Spellbook App
-            tempApp = diceLoader.loadClass("spellbook.Spellbook");
+            tempApp = appLoader.loadClass("spellbook.Spellbook");
             spellbook.Spellbook spellbookMain = (spellbook.Spellbook) tempApp.newInstance();
             spellbookMain.start(applicationStage);
             spellbookScene = spellbookMain.getScene();
             
             // Load Weather App
-            tempApp = diceLoader.loadClass("weatherapp.WeatherApp");
+            tempApp = appLoader.loadClass("weatherapp.WeatherApp");
             weatherapp.WeatherApp weatherMain = (weatherapp.WeatherApp) tempApp.newInstance();
             weatherMain.start(applicationStage);
             weatherScene = weatherMain.getScene();
+            
+            // Load Notebook App
+            tempApp = appLoader.loadClass("notebook.Notebook");
+            notebook.Notebook notebookMain = (notebook.Notebook) tempApp.newInstance();
+            notebookMain.start(applicationStage);
+            notebookScene = notebookMain.getScene();
             
             // Load Scene 1
             applicationStage.setTitle("D&D Application Child Window");
