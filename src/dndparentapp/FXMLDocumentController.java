@@ -17,49 +17,49 @@ import javafx.stage.Stage;
  */
 public class FXMLDocumentController implements Initializable {
     
-    public void openScene1() {
+    public void openSceneDice() {
         applicationStage.setScene(diceScene);
         applicationStage.show();
         moveOnScreen();
     }
     
-    public void openScene2() {
+    public void openSceneHealth() {
         applicationStage.setScene(healthScene);
         applicationStage.show();
         moveOnScreen();
     }
     
-    public void openScene3() {
+    public void openSceneTool() {
         applicationStage.setScene(toolScene);
         applicationStage.show();
         moveOnScreen();
     }
     
-    public void openScene4() {
+    public void openSceneInit() {
         applicationStage.setScene(initiativeScene);
         applicationStage.show();
         moveOnScreen();
     }
     
-    public void openScene5() {
+    public void openSceneSorc() {
         applicationStage.setScene(sorcererScene);
         applicationStage.show();
         moveOnScreen();
     }
     
-    public void openScene6() {
+    public void openSceneSpells() {
         applicationStage.setScene(spellbookScene);
         applicationStage.show();
         moveOnScreen();
     }
     
-    public void openScene7() {
+    public void openSceneWeather() {
         applicationStage.setScene(weatherScene);
         applicationStage.show();
         moveOnScreen();
     }
     
-    public void openScene8() {
+    public void openSceneNotes() {
         applicationStage.setScene(notebookScene);
         applicationStage.show();
         moveOnScreen();
@@ -147,10 +147,10 @@ public class FXMLDocumentController implements Initializable {
             
             // Load Scene 1
             applicationStage.setTitle("D&D Application Child Window");
-            openScene1();
+            openSceneDice();
         } catch (Exception e) {
             System.out.println(e.getMessage());
-            System.out.println(e.fillInStackTrace());
+            e.printStackTrace();
         }
         //</editor-fold>
     }    
